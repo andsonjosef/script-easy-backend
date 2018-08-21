@@ -1,0 +1,40 @@
+package com.scripteasy.domain.enums;
+
+public class TypeUser {
+
+	USER(1, "User"),
+	ADMIN(2, "Admin");
+	
+	private int cod;
+	private String description;
+	
+	private TypeUser(int cod, String description) {
+		this.cod = cod;
+		this.description = description;
+	}
+	
+	public int getCod() {
+		return cod;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+	public static TypeUser toEnum(Integer cod) {
+		
+		if(cod == null) {
+			return null;
+		}
+		
+		for(TypeUser x : TypeUser.values()) {
+			if(cod.equals(x.getCod())) {
+				return x;
+			}
+		}
+
+		throw new IllegalArgumentException("Illegal Id: " + cod);
+	}
+}
+
+

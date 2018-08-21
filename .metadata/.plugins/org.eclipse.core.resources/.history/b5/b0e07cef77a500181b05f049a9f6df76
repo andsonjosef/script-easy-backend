@@ -1,0 +1,5 @@
+package com.scripteasy.domain.enums;
+
+public class Profile {
+
+}
