@@ -1,0 +1,5 @@
+package com.scripteasy.DTO;
+
+public class UserDTO {
+
+}

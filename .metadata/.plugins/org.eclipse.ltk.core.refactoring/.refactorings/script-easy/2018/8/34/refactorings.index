@@ -1,2 +1,14 @@
 1534878247161	Delete element
 1534879489865	Delete element
+1534881949806	Rename type 'ClientNewDTO'
+1534882091937	Rename type 'ClientInsertValidator'
+1534883955252	Rename compilation unit 'ClientUpdateValidator.java'
+1534883977546	Rename type 'ClientUpdate'
+1534884073992	Delete element
+1534884669091	Rename type 'Attribute'
+1534884675455	Rename type 'DataBase'
+1534884681888	Rename type 'Schema'
+1534884688028	Rename type 'Table'
+1534884695271	Rename type 'User'
+1534885034135	Delete elements
+1534885748122	Delete element

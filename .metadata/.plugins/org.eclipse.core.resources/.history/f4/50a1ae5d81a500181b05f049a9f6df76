@@ -1,0 +1,5 @@
+package com.scripteasy.services.excpetion;
+
+public class AuthorizationException {
+
+}

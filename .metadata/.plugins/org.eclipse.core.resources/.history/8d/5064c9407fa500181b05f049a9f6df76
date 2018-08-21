@@ -1,0 +1,90 @@
+package com.scripteasy.services;
+@Service
+public class UserService {
+
+	@Autowired
+	private UserRepository repo;
+	
+	@Autowired
+	private BCryptPasswordEncoder pe;
+	
+	@Autowired
+	private AddressRepository addressRepository;
+	
+
+	public User find(Integer id) {
+		UserSS user = UserService.authenticated();
+		
+		if(user==null || !user.hasRole(Profile.ADMIN) && !id.equals(user.getId())) {
+			throw new AuthorizationException("Acess denied");
+		}
+		
+		Optional<User> obj = repo.findById(id);
+		return obj.orElseThrow(
+				() -> new ObjectNotFoundException("Obect not found! Id: " + id + ", Type: " + User.class.getName()));
+	}
+
+	@Transactional
+	public User insert(User obj) {
+		obj.setId(null);
+		obj = repo.save(obj);
+		addressRepository.saveAll(obj.getAdresses());
+		return obj;
+	}
+
+	public User update(User obj) {
+		User newObj = find(obj.getId());
+		updateData(newObj, obj);
+		return repo.save(newObj);
+	}
+
+	public void delete(Integer id) {
+		find(id);
+		try {
+			repo.deleteById(id);
+		} catch (DataIntegrityViolationException e) {
+			throw new DataIntegrityException("Can not delete because there are related orders");
+		}
+	}
+
+	public List<User> findAll() {
+		return repo.findAll();
+	}
+
+	public Page<User> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
+		PageRequest pageRequest = PageRequest.of(page, linesPerPage, Direction.valueOf(direction), orderBy);
+
+		return repo.findAll(pageRequest);
+	}
+
+	public User fromDTO(UserDTO objDto) {
+		return new User(objDto.getId(), objDto.getName(), objDto.getEmail(), null, null, null);
+
+	}
+
+	public User fromDTO(UserNewDTO objDto) {
+		User cli = new User(null, objDto.getName(), objDto.getEmail(), objDto.getTid(),
+				TypeUser.toEnum(objDto.getType()), pe.encode(objDto.getPassword()));
+		City city = new City(objDto.getCityId(), null, null);
+		Address address = new Address(null, objDto.getStreet(), objDto.getNumber(), objDto.getComplement(),
+				objDto.getDistrict(), objDto.getZipCode(), cli, city);
+		cli.getAdresses().add(address);
+		cli.getPhones().add(objDto.getPhone1());
+
+		if (objDto.getPhone2() != null) {
+			cli.getPhones().add(objDto.getPhone2());
+		}
+		if (objDto.getPhone3() != null) {
+			cli.getPhones().add(objDto.getPhone3());
+		}
+		return cli;
+
+	}
+
+	private void updateData(User newObj, User obj) {
+		newObj.setName(obj.getName());
+		newObj.setEmail(obj.getEmail());
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.scripteasy.services;
+
+import com.scripteasy.domain.UserSE;
+
+public interface EmailService {
+
+	
+	void sendNewPasswordEmail(UserSE user, String newPass);
+}

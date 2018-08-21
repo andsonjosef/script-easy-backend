@@ -1,0 +1,5 @@
+spring.profiles.active=test
+
+
+jwt.secret=CharSequenceToAssignToken
+jwt.expiration=60000

@@ -1,0 +1,12 @@
+package com.scripteasy.services.validation;
+
+@Constraint(validatedBy = ClientInsertValidator.class)
+@Target({ ElementType.TYPE })
+@Retention(RetentionPolicy.RUNTIME)
+public @interface ClientInsert {
+	String message() default "Validation error";
+
+	Class<?>[] groups() default {};
+
+	Class<? extends Payload>[] payload() default {};
+}
