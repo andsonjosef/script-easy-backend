@@ -1,0 +1,107 @@
+package com.scripteasy.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.scripteasy.DTO.DataBaseDTO;
+import com.scripteasy.DTO.DataBaseNewDTO;
+import com.scripteasy.domain.DataBaseSE;
+import com.scripteasy.domain.UserSE;
+import com.scripteasy.domain.enums.Profile;
+import com.scripteasy.repositories.DataBaseRepository;
+import com.scripteasy.repositories.UserRepository;
+import com.scripteasy.security.UserSS;
+import com.scripteasy.services.excpetion.AuthorizationException;
+import com.scripteasy.services.excpetion.DataIntegrityException;
+import com.scripteasy.services.excpetion.ObjectNotFoundException;
+
+@Service
+public class DataBaseService {
+
+	@Autowired
+	private DataBaseRepository repo;
+	
+	@Autowired
+	private UserRepository userRepo;
+
+	@Autowired
+	private BCryptPasswordEncoder pe;
+	
+	UserSS user =UserSService.authenticated();
+
+	public DataBaseSE find(Integer id) {
+		
+
+		if (user == null || !user.hasRole(Profile.ADMIN) && !id.equals(user.getId())) {
+			throw new AuthorizationException("Acess denied");
+		}
+
+		Optional<DataBaseSE> obj = repo.findById(id);
+		return obj.orElseThrow(
+				() -> new ObjectNotFoundException("Obect not found! Id: " + id + ", Type: " + DataBaseSE.class.getName()));
+	}
+
+	@Transactional
+	public DataBaseSE insert(DataBaseSE obj) {
+		obj.setId(null);
+		obj = repo.save(obj);
+		return obj;
+	}
+
+	public DataBaseSE update(DataBaseSE obj) {
+		DataBaseSE newObj = find(obj.getId());
+		updateData(newObj, obj);
+		return repo.save(newObj);
+	}
+
+	public void delete(Integer id) {
+		find(id);
+		try {
+			repo.deleteById(id);
+		} catch (DataIntegrityViolationException e) {
+			throw new DataIntegrityException("Can not delete because there are related orders");
+		}
+	}
+
+	public List<DataBaseSE> findAll() {
+		return repo.findAll();
+	}
+
+	public Page<DataBaseSE> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
+		PageRequest pageRequest = PageRequest.of(page, linesPerPage, Direction.valueOf(direction), orderBy);
+
+		return repo.findAll(pageRequest);
+	}
+
+	public DataBaseSE fromDTO(DataBaseDTO objDto) {
+		UserSE userSE = new userRepo.findById(user.getId());
+		return new DataBaseSE(objDto.getId(), objDto.getName(), <UserSE> user);
+
+	}
+
+	public DataBaseSE fromDTO(DataBaseNewDTO objDto) {
+		DataBaseSE user = new DataBaseSE(null, objDto.getName(), objDto.getEmail(),
+				pe.encode(objDto.getPassword()));
+
+		
+		return user;
+
+	}
+
+	private void updateData(DataBaseSE newObj, DataBaseSE obj) {
+		newObj.setName(obj.getName());
+		newObj.setEmail(obj.getEmail());
+
+	}
+
+}

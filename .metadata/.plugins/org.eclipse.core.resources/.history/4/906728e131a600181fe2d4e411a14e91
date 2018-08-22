@@ -1,0 +1,77 @@
+package com.scripteasy.services;
+
+import java.util.Date;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.stereotype.Service;
+
+import com.example.cursomc.domain.User;
+import com.example.cursomc.domain.ItemDataBase;
+import com.example.cursomc.domain.DataBase;
+import com.example.cursomc.domain.PaymentBankTransfer;
+import com.example.cursomc.domain.enums.StatusPayment;
+import com.example.cursomc.repositories.ItemDataBaseRepository;
+import com.example.cursomc.repositories.DataBaseRepository;
+import com.example.cursomc.repositories.PaymentRepository;
+import com.example.cursomc.security.UserSS;
+import com.example.cursomc.services.exceptions.AuthorizationException;
+import com.example.cursomc.services.exceptions.ObjectNotFoundException;
+
+@Service
+public class DataBaseService {
+
+
+	@Autowired
+	private DataBaseRepository repo;
+
+
+	@Autowired
+	UserService userService;
+
+	public DataBase find(Integer id) {
+		Optional<DataBase> obj = repo.findById(id);
+		return obj.orElseThrow(
+				() -> new ObjectNotFoundException("Obect not found! Id: " + id + ", Type: " + DataBase.class.getName()));
+	}
+
+	@Transactional
+	public DataBase insert(DataBase obj) {
+		obj.setId(null);
+		obj.setMoment(new Date());
+		obj.setUser(userService.find(obj.getUser().getId()));
+		obj.getPayment().setStatus(StatusPayment.PENDING);
+		obj.getPayment().setDataBase(obj);
+		if (obj.getPayment() instanceof PaymentBankTransfer) {
+			PaymentBankTransfer pay = (PaymentBankTransfer) obj.getPayment();
+			bankTransferService.fillPaymentBankTransfer(pay, obj.getMoment());
+		}
+		obj = repo.save(obj);
+		paymentRepository.save(obj.getPayment());
+		for (ItemDataBase io : obj.getItems()) {
+			io.setDiscount(0.0);
+			io.setProduct(productService.find(io.getProduct().getId()));
+			io.setPrice(io.getProduct().getPrice());
+			io.setDataBase(obj);
+		}
+		itemDataBaseRepository.saveAll(obj.getItems());
+		emailService.sendDataBaseConfirmationHtmlEmail(obj);
+
+		return obj;
+	}
+
+	public Page<DataBase> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
+		UserSS user = UserService.authenticated();
+		if (user == null) {
+			throw new AuthorizationException("Acess denied");
+		}
+		PageRequest pageRequest = PageRequest.of(page, linesPerPage, Direction.valueOf(direction), orderBy);
+		User user = userService.find(user.getId());
+		return repo.findByUser(user, pageRequest);
+	}
+}

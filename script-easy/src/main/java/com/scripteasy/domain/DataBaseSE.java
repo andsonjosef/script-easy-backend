@@ -21,7 +21,7 @@ public class DataBaseSE implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Integer id;
 	private String name;
 
 	@OneToMany(mappedBy = "database", cascade = CascadeType.ALL)
@@ -36,18 +36,18 @@ public class DataBaseSE implements Serializable {
 
 	}
 
-	public DataBaseSE(long id, String name, UserSE user) {
+	public DataBaseSE(Integer id, String name, UserSE user) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.user = user;
 	}
 
-	public long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
