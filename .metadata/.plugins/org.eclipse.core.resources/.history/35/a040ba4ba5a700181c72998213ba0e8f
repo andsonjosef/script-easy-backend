@@ -14,7 +14,6 @@ import com.scripteasy.domain.UserSE;
 import com.scripteasy.domain.enums.Profile;
 import com.scripteasy.repositories.DataBaseRepository;
 import com.scripteasy.repositories.SchemaRepository;
-import com.scripteasy.repositories.TableRepository;
 import com.scripteasy.repositories.UserRepository;
 
 @Service
@@ -31,9 +30,6 @@ public class DBService {
 
 	@Autowired
 	private SchemaRepository schemaRepository;
-	
-	@Autowired
-	private TableRepository tableRepository;
 
 	public void IstantiateTestDataBase() throws ParseException {
 
@@ -67,7 +63,6 @@ public class DBService {
 		userRepository.saveAll(Arrays.asList(us1, us2));
 		databaseRepository.saveAll(Arrays.asList(db1, db2, db3));
 		schemaRepository.saveAll(Arrays.asList(sc1, sc2, sc3));
-		tableRepository.saveAll(Arrays.asList(tb1,tb2,tb3));
 
 	}
 

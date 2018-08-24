@@ -67,7 +67,6 @@ public class DBService {
 		userRepository.saveAll(Arrays.asList(us1, us2));
 		databaseRepository.saveAll(Arrays.asList(db1, db2, db3));
 		schemaRepository.saveAll(Arrays.asList(sc1, sc2, sc3));
-		tableRepository.saveAll(Arrays.asList(tb1,tb2,tb3));
 
 	}
 
