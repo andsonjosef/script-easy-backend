@@ -26,7 +26,7 @@ public class AttributeSE implements Serializable {
 	private Integer size;
 	private String type;
 	private String comment;
-	private String referencesTable;
+	private String ReferencesTable;
 
 	@JsonIgnore
 	@ManyToOne
@@ -49,7 +49,7 @@ public class AttributeSE implements Serializable {
 		this.size = size;
 		this.type = type;
 		this.comment = comment;
-		this.referencesTable = referencesTable;
+		ReferencesTable = referencesTable;
 		this.table = table;
 	}
 
@@ -126,11 +126,11 @@ public class AttributeSE implements Serializable {
 	}
 
 	public String getReferencesTable() {
-		return referencesTable;
+		return ReferencesTable;
 	}
 
 	public void setReferencesTable(String referencesTable) {
-		this.referencesTable = referencesTable;
+		ReferencesTable = referencesTable;
 	}
 
 	public TableSE getTable() {

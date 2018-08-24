@@ -26,7 +26,7 @@ public class AttributeSE implements Serializable {
 	private Integer size;
 	private String type;
 	private String comment;
-	private String referencesTable;
+	private TableSE referencesTable;
 
 	@JsonIgnore
 	@ManyToOne
@@ -38,7 +38,7 @@ public class AttributeSE implements Serializable {
 	}
 
 	public AttributeSE(Integer id, boolean ai, String defaultA, String index, String name, boolean nullA, Integer size,
-			String type, String comment, String referencesTable, TableSE table) {
+			String type, String comment, TableSE referencesTable, TableSE table) {
 		super();
 		this.id = id;
 		this.ai = ai;
@@ -125,11 +125,12 @@ public class AttributeSE implements Serializable {
 		this.comment = comment;
 	}
 
-	public String getReferencesTable() {
+
+	public TableSE getReferencesTable() {
 		return referencesTable;
 	}
 
-	public void setReferencesTable(String referencesTable) {
+	public void setReferencesTable(TableSE referencesTable) {
 		this.referencesTable = referencesTable;
 	}
 

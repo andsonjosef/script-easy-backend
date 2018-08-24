@@ -49,7 +49,7 @@ public class AttributeSE implements Serializable {
 		this.size = size;
 		this.type = type;
 		this.comment = comment;
-		this.referencesTable = referencesTable;
+		referencesTable = referencesTable;
 		this.table = table;
 	}
 
@@ -130,7 +130,7 @@ public class AttributeSE implements Serializable {
 	}
 
 	public void setReferencesTable(String referencesTable) {
-		this.referencesTable = referencesTable;
+		referencesTable = referencesTable;
 	}
 
 	public TableSE getTable() {

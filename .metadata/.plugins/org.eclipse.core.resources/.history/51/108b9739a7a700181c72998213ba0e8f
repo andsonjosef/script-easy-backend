@@ -130,7 +130,7 @@ public class AttributeSE implements Serializable {
 	}
 
 	public void setReferencesTable(String referencesTable) {
-		this.referencesTable = referencesTable;
+		referencesTable = referencesTable;
 	}
 
 	public TableSE getTable() {

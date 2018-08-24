@@ -13,7 +13,6 @@ import com.scripteasy.domain.SchemaSE;
 import com.scripteasy.domain.TableSE;
 import com.scripteasy.domain.UserSE;
 import com.scripteasy.domain.enums.Profile;
-import com.scripteasy.repositories.AttributeRepository;
 import com.scripteasy.repositories.DataBaseRepository;
 import com.scripteasy.repositories.SchemaRepository;
 import com.scripteasy.repositories.TableRepository;
@@ -36,9 +35,6 @@ public class DBService {
 	
 	@Autowired
 	private TableRepository tableRepository;
-	
-	@Autowired
-	private AttributeRepository attributeRepository;
 
 	public void IstantiateTestDataBase() throws ParseException {
 
@@ -61,8 +57,8 @@ public class DBService {
 		
 		AttributeSE att1 = new AttributeSE(null, true, "", "PRIMARY", "id", false, 30, "INT", "", null, tb1);
 		AttributeSE att2 = new AttributeSE(null, false, "", "", "name", false, 30, "CHAR", "", null, tb1);
-		AttributeSE att3 = new AttributeSE(null, false, "", "FOREIGN", "table1_id", false, 30, "int", "", "table1", tb2);
-		AttributeSE att4 = new AttributeSE(null, false, "", "", "name", false, 30, "int", "", "table2", tb2);
+		AttributeSE att3 = new AttributeSE(null, false, "", "FOREIGN", "table1_id", false, 30, "int", "", tb1, tb2);
+		AttributeSE att4 = new AttributeSE(null, false, "", "", "name", false, 30, "int", "", tb1, tb2);
 
 		us1.getDataBases().addAll(Arrays.asList(db1, db2));
 		us2.getDataBases().addAll(Arrays.asList(db3));
@@ -73,15 +69,11 @@ public class DBService {
 		
 		sc1.getTables().addAll(Arrays.asList(tb1, tb2));
 		sc2.getTables().addAll(Arrays.asList(tb3));
-		
-		tb1.getAttributes().addAll(Arrays.asList(att1,att2));
-		tb2.getAttributes().addAll(Arrays.asList(att3,att4));
 
 		userRepository.saveAll(Arrays.asList(us1, us2));
 		databaseRepository.saveAll(Arrays.asList(db1, db2, db3));
 		schemaRepository.saveAll(Arrays.asList(sc1, sc2, sc3));
 		tableRepository.saveAll(Arrays.asList(tb1,tb2,tb3));
-		attributeRepository.saveAll(Arrays.asList(att1,att2,att3,att4));
 
 	}
 

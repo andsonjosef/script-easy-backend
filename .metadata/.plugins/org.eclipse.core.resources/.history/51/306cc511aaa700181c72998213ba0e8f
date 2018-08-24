@@ -61,8 +61,8 @@ public class DBService {
 		
 		AttributeSE att1 = new AttributeSE(null, true, "", "PRIMARY", "id", false, 30, "INT", "", null, tb1);
 		AttributeSE att2 = new AttributeSE(null, false, "", "", "name", false, 30, "CHAR", "", null, tb1);
-		AttributeSE att3 = new AttributeSE(null, false, "", "FOREIGN", "table1_id", false, 30, "int", "", "table1", tb2);
-		AttributeSE att4 = new AttributeSE(null, false, "", "", "name", false, 30, "int", "", "table2", tb2);
+		AttributeSE att3 = new AttributeSE(null, false, "", "FOREIGN", "table1_id", false, 30, "int", "", tb1, tb2);
+		AttributeSE att4 = new AttributeSE(null, false, "", "", "name", false, 30, "int", "", tb1, tb2);
 
 		us1.getDataBases().addAll(Arrays.asList(db1, db2));
 		us2.getDataBases().addAll(Arrays.asList(db3));
