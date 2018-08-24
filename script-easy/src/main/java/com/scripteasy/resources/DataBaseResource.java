@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-
+import com.scripteasy.DTO.DataBaseDTO;
 import com.scripteasy.DTO.DataBaseNewDTO;
 import com.scripteasy.domain.DataBaseSE;
 import com.scripteasy.services.DataBaseService;
@@ -45,6 +45,21 @@ public class DataBaseResource {
 
 	}
 
+	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+	public ResponseEntity<Void> update(@Valid @RequestBody DataBaseDTO objDto, @PathVariable Integer id) {
+		DataBaseSE obj = service.fromDTO(objDto);
+		obj.setId(id);
+		obj = service.update(obj);
+		return ResponseEntity.noContent().build();
+
+	}
+
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+	public ResponseEntity<Void> delete(@PathVariable Integer id) {
+
+		service.delete(id);
+		return ResponseEntity.noContent().build();
+	}
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<Page<DataBaseSE>> findPage(@RequestParam(value = "page", defaultValue = "0") Integer page,

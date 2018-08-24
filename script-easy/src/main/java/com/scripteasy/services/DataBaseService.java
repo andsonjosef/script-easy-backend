@@ -5,6 +5,7 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort.Direction;
@@ -18,6 +19,7 @@ import com.scripteasy.domain.enums.Profile;
 import com.scripteasy.repositories.DataBaseRepository;
 import com.scripteasy.security.UserSS;
 import com.scripteasy.services.excpetion.AuthorizationException;
+import com.scripteasy.services.excpetion.DataIntegrityException;
 import com.scripteasy.services.excpetion.ObjectNotFoundException;
 
 
@@ -34,11 +36,10 @@ public class DataBaseService {
 	UserService userService;
 
 	public DataBaseSE find(Integer id) {
-		UserSS user = UserSService.authenticated();
 
-		
 		Optional<DataBaseSE> obj = repo.findById(id);
 		
+		UserSS user = UserSService.authenticated();
 		if (user == null || !user.hasRole(Profile.ADMIN) && !obj.get().getUser().getId().equals(user.getId())) {
 			throw new AuthorizationException("Acess denied");
 		}
@@ -53,6 +54,36 @@ public class DataBaseService {
 		obj = repo.save(obj);
 
 		return obj;
+	}
+	
+
+	public DataBaseSE update(DataBaseSE obj) {
+		
+		Optional<DataBaseSE> optimalobj = repo.findById(obj.getId());
+		UserSS user = UserSService.authenticated();
+		if (user == null || !user.hasRole(Profile.ADMIN) && !optimalobj.get().getUser().getId().equals(user.getId())) {
+			throw new AuthorizationException("Acess denied");
+		}
+
+		DataBaseSE newObj = find(obj.getId());
+		updateData(newObj, obj);
+		return repo.save(newObj);
+	}
+
+	public void delete(Integer id) {
+		Optional<DataBaseSE> optimalobj = repo.findById(id);
+		UserSS user = UserSService.authenticated();
+		
+		if (user == null || !user.hasRole(Profile.ADMIN) && !optimalobj.get().getUser().getId().equals(user.getId())) {
+			throw new AuthorizationException("Acess denied");
+		}
+		
+		find(id);
+		try {
+			repo.deleteById(id);
+		} catch (DataIntegrityViolationException e) {
+			throw new DataIntegrityException("Can not delete because there are related orders");
+		}
 	}
 
 	public Page<DataBaseSE> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
@@ -76,6 +107,11 @@ public class DataBaseService {
 		UserSE userse = userService.find(user.getId());
 		DataBaseSE database = new DataBaseSE(null, objDto.getName(), userse);
 		return database;
+
+	}
+	
+	private void updateData(DataBaseSE newObj, DataBaseSE obj) {
+		newObj.setName(obj.getName());
 
 	}
 }

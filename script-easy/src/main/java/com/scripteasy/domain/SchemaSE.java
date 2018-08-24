@@ -21,7 +21,7 @@ public class SchemaSE implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Integer id;
 	private String name;
 	
 	@OneToMany(mappedBy = "schema", cascade = CascadeType.ALL)
@@ -37,18 +37,18 @@ public class SchemaSE implements Serializable {
 		
 	}
 	
-	public SchemaSE(long id, String name, DataBaseSE dataBase) {
+	public SchemaSE(Integer id, String name, DataBaseSE dataBase) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.database = dataBase;
 	}
 
-	public long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
