@@ -1,5 +1,0 @@
-package com.scripteasy.services.validation;
-
-public class DataIntegrityException {
-
-}

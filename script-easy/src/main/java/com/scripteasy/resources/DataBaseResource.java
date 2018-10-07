@@ -1,6 +1,8 @@
 package com.scripteasy.resources;
 
 import java.net.URI;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
@@ -17,8 +19,14 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.scripteasy.DTO.DataBaseDTO;
 import com.scripteasy.DTO.DataBaseNewDTO;
+import com.scripteasy.DTO.SchemaDTO;
 import com.scripteasy.domain.DataBaseSE;
+import com.scripteasy.domain.SchemaSE;
+import com.scripteasy.security.UserSS;
 import com.scripteasy.services.DataBaseService;
+import com.scripteasy.services.SchemaService;
+import com.scripteasy.services.UserSService;
+import com.scripteasy.services.excpetion.AuthorizationException;
 
 @RestController
 @RequestMapping(value = "/bases")
@@ -26,6 +34,24 @@ public class DataBaseResource {
 
 	@Autowired
 	private DataBaseService service;
+
+	@Autowired
+	private SchemaService schemaService;
+
+	@RequestMapping(method = RequestMethod.GET)
+	public ResponseEntity<List<DataBaseDTO>> findBases() {
+
+		UserSS userSS = UserSService.authenticated();
+		if (userSS == null) {
+			throw new AuthorizationException("Acess denied");
+		}
+
+		List<DataBaseSE> list = service.findByUser(userSS.getId());
+		List<DataBaseDTO> listDto = list.stream().map(obj -> new DataBaseDTO(obj)).collect(Collectors.toList());
+
+		return ResponseEntity.ok().body(listDto);
+
+	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<DataBaseSE> find(@PathVariable Integer id) {
@@ -35,7 +61,7 @@ public class DataBaseResource {
 		return ResponseEntity.ok().body(obj);
 
 	}
-	
+
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Void> insert(@Valid @RequestBody DataBaseNewDTO objDto) {
 		DataBaseSE obj = service.fromDTO(objDto);
@@ -61,16 +87,36 @@ public class DataBaseResource {
 		return ResponseEntity.noContent().build();
 	}
 
-	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<Page<DataBaseSE>> findPage(@RequestParam(value = "page", defaultValue = "0") Integer page,
-			@RequestParam(value = "linesPerPage", defaultValue = "24") Integer linesPerPage,
-			@RequestParam(value = "orderBy", defaultValue = "moment") String orderBy,
-			@RequestParam(value = "direction", defaultValue = "DESC") String direction) {
-
-		Page<DataBaseSE> list = service.findPage(page, linesPerPage, orderBy, direction);
-
-		return ResponseEntity.ok().body(list);
-
+	@RequestMapping(value = "/{databaseId}/schemas", method = RequestMethod.GET)
+	public ResponseEntity<List<SchemaDTO>> findSchemas(@PathVariable Integer databaseId) {
+		List<SchemaSE> list = schemaService.findByDataBase(databaseId);
+		List<SchemaDTO> listDto = list.stream().map(obj -> new SchemaDTO(obj)).collect(Collectors.toList());
+		return ResponseEntity.ok().body(listDto);
 	}
+	
+	@RequestMapping(value = "/page", method = RequestMethod.GET)
+	public ResponseEntity<Page<DataBaseDTO>> findPage(
+			@RequestParam(value="page", defaultValue ="0") Integer page,
+			@RequestParam(value="linesPerPage", defaultValue ="24") Integer linesPerPage,
+			@RequestParam(value="orderBy", defaultValue ="name") String orderBy,
+			@RequestParam(value="direction", defaultValue ="ASC") String direction) {
+ 		Page<DataBaseSE> list = service.findPage(page, linesPerPage, orderBy, direction);
+		Page<DataBaseDTO> listDto = list.map(obj -> new DataBaseDTO(obj));
+ 		return ResponseEntity.ok().body(listDto);
+  	}
+	
+	
+	@RequestMapping(value = "/{databaseId}/schemas/page", method = RequestMethod.GET)
+	public ResponseEntity<Page<SchemaDTO>> findSchemaPage(
+			@PathVariable Integer databaseId,
+			@RequestParam(value="page", defaultValue ="0") Integer page,
+			@RequestParam(value="linesPerPage", defaultValue ="24") Integer linesPerPage,
+			@RequestParam(value="orderBy", defaultValue ="name") String orderBy,
+			@RequestParam(value="direction", defaultValue ="ASC") String direction
+			) {
+ 		Page<SchemaSE> list = schemaService.findPage(databaseId, page, linesPerPage, orderBy, direction);
+		Page<SchemaDTO> listDto = list.map(obj -> new SchemaDTO(obj));
+ 		return ResponseEntity.ok().body(listDto);
+  	}
 
 }

@@ -19,10 +19,10 @@ public class AttributeSE implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private boolean ai;
-	private String defaultA;
-	private String index;
+	private String Adefault;
+	private String Aindex;
 	private String name;
-	private boolean nullA;
+	private boolean Anull;
 	private Integer size;
 	private String type;
 	private String comment;
@@ -37,21 +37,23 @@ public class AttributeSE implements Serializable {
 
 	}
 
-	public AttributeSE(Integer id, boolean ai, String defaultA, String index, String name, boolean nullA, Integer size,
+	public AttributeSE(Integer id, boolean ai, String Adefault, String Aindex, String name, boolean Anull, Integer size,
 			String type, String comment, String referencesTable, TableSE table) {
 		super();
 		this.id = id;
 		this.ai = ai;
-		this.defaultA = defaultA;
-		this.index = index;
+		this.Adefault = Adefault;
+		this.Aindex = Aindex;
 		this.name = name;
-		this.nullA = nullA;
+		this.Anull = Anull;
 		this.size = size;
 		this.type = type;
 		this.comment = comment;
 		this.referencesTable = referencesTable;
 		this.table = table;
 	}
+
+
 
 	public Integer getId() {
 		return id;
@@ -69,20 +71,20 @@ public class AttributeSE implements Serializable {
 		this.ai = ai;
 	}
 
-	public String getDefaultA() {
-		return defaultA;
+	public String getAdefault() {
+		return Adefault;
 	}
 
-	public void setDefaultA(String defaultA) {
-		this.defaultA = defaultA;
+	public void setAdefault(String adefault) {
+		Adefault = adefault;
 	}
 
-	public String getIndex() {
-		return index;
+	public String getAindex() {
+		return Aindex;
 	}
 
-	public void setIndex(String index) {
-		this.index = index;
+	public void setAindex(String aindex) {
+		Aindex = aindex;
 	}
 
 	public String getName() {
@@ -93,12 +95,12 @@ public class AttributeSE implements Serializable {
 		this.name = name;
 	}
 
-	public boolean isNullA() {
-		return nullA;
+	public boolean isAnull() {
+		return Anull;
 	}
 
-	public void setNullA(boolean nullA) {
-		this.nullA = nullA;
+	public void setAnull(boolean anull) {
+		Anull = anull;
 	}
 
 	public Integer getSize() {

@@ -60,7 +60,7 @@ public class SchemaSE implements Serializable {
 		this.name = name;
 	}
 
-	
+	@JsonIgnore
 	public List<TableSE> getTables() {
 		return tables;
 	}

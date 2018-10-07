@@ -59,7 +59,7 @@ public class TableSE implements Serializable {
 		this.name = name;
 	}
 
-	
+	@JsonIgnore
 	public List<AttributeSE> getAttributes() {
 		return attributes;
 	}

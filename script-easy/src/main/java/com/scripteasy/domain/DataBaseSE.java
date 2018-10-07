@@ -67,6 +67,7 @@ public class DataBaseSE implements Serializable {
 		this.user = user;
 	}
 
+	@JsonIgnore
 	public List<SchemaSE> getSchemas() {
 		return schemas;
 	}

@@ -14,18 +14,18 @@ public class SchemaNewDTO implements Serializable {
 	@NotEmpty(message = "Required Field")
 	@Length(min = 5, max = 120, message = "The size must to be between 5 and 120 characters")
 	private String name;
-	private DataBaseSE database;
+	private DataBaseSE base;
 
 	public SchemaNewDTO() {
 
 	}
 
-	public DataBaseSE getDatabase() {
-		return database;
+	public DataBaseSE getBase() {
+		return base;
 	}
 
-	public void setDatabase(DataBaseSE database) {
-		this.database = database;
+	public void setBase(DataBaseSE base) {
+		this.base = base;
 	}
 
 	public String getName() {

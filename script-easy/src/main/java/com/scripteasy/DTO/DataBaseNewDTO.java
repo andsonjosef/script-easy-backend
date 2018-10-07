@@ -19,17 +19,14 @@ public class DataBaseNewDTO implements Serializable {
 	public DataBaseNewDTO() {
 
 	}
-		
 
 	public UserSE getUser() {
 		return user;
 	}
 
-
 	public void setUser(UserSE user) {
 		this.user = user;
 	}
-
 
 	public String getName() {
 		return name;
@@ -38,6 +35,5 @@ public class DataBaseNewDTO implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-
 
 }

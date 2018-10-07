@@ -49,39 +49,44 @@ public class DBService {
 
 		DataBaseSE db1 = new DataBaseSE(null, "base1", us1);
 		DataBaseSE db2 = new DataBaseSE(null, "base2", us1);
-		DataBaseSE db3 = new DataBaseSE(null, "base1", us2);
+		DataBaseSE db3 = new DataBaseSE(null, "base3", us2);
 
 		SchemaSE sc1 = new SchemaSE(null, "schema1", db1);
 		SchemaSE sc2 = new SchemaSE(null, "schema2", db1);
 		SchemaSE sc3 = new SchemaSE(null, "schema3", db2);
+		SchemaSE sc4 = new SchemaSE(null, "schema4", db3);
 		
 		TableSE tb1 = new TableSE(null, "table1", sc1);
 		TableSE tb2 = new TableSE(null, "table2", sc1);
 		TableSE tb3 = new TableSE(null, "table3", sc2);
+		TableSE tb4 = new TableSE(null, "table4", sc4);
 		
 		AttributeSE att1 = new AttributeSE(null, true, "", "PRIMARY", "id", false, 30, "INT", "", null, tb1);
 		AttributeSE att2 = new AttributeSE(null, false, "", "", "name", false, 30, "CHAR", "", null, tb1);
 		AttributeSE att3 = new AttributeSE(null, false, "", "FOREIGN", "table1_id", false, 30, "int", "", "table1", tb2);
 		AttributeSE att4 = new AttributeSE(null, false, "", "", "name", false, 30, "int", "", "table2", tb2);
+		AttributeSE att5 = new AttributeSE(null, false, "", "", "name", false, 30, "int", "", "table2", tb4);
 
 		us1.getDataBases().addAll(Arrays.asList(db1, db2));
 		us2.getDataBases().addAll(Arrays.asList(db3));
 
 		db1.getSchemas().addAll(Arrays.asList(sc1, sc2));
-		db1.getSchemas().addAll(Arrays.asList(sc1, sc2));
-		db1.getSchemas().addAll(Arrays.asList(sc1, sc2));
+		db2.getSchemas().addAll(Arrays.asList(sc3));
+		db3.getSchemas().addAll(Arrays.asList(sc4));
 		
 		sc1.getTables().addAll(Arrays.asList(tb1, tb2));
 		sc2.getTables().addAll(Arrays.asList(tb3));
+		sc4.getTables().addAll(Arrays.asList(tb4));
 		
 		tb1.getAttributes().addAll(Arrays.asList(att1,att2));
 		tb2.getAttributes().addAll(Arrays.asList(att3,att4));
+		tb4.getAttributes().addAll(Arrays.asList(att5));
 
 		userRepository.saveAll(Arrays.asList(us1, us2));
 		databaseRepository.saveAll(Arrays.asList(db1, db2, db3));
-		schemaRepository.saveAll(Arrays.asList(sc1, sc2, sc3));
-		tableRepository.saveAll(Arrays.asList(tb1,tb2,tb3));
-		attributeRepository.saveAll(Arrays.asList(att1,att2,att3,att4));
+		schemaRepository.saveAll(Arrays.asList(sc1, sc2, sc3,sc4));
+		tableRepository.saveAll(Arrays.asList(tb1,tb2,tb3,tb4));
+		attributeRepository.saveAll(Arrays.asList(att1,att2,att3,att4,att5));
 
 	}
 

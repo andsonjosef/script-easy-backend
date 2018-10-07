@@ -6,6 +6,7 @@ import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.validator.constraints.Length;
 
+import com.scripteasy.domain.DataBaseSE;
 import com.scripteasy.domain.SchemaSE;
 
 public class SchemaDTO implements Serializable {
@@ -16,7 +17,9 @@ public class SchemaDTO implements Serializable {
 	@NotEmpty(message = "Required Field")
 	@Length(min = 5, max = 120, message = "The size must to be between 5 and 120 characters")
 	private String name;
+	private DataBaseSE base;
 
+	
 
 	public SchemaDTO() {
 		
@@ -25,8 +28,18 @@ public class SchemaDTO implements Serializable {
 	public  SchemaDTO(SchemaSE obj){
 		id = obj.getId();
 		name = obj.getName();
+		base = obj.getDatabase();
+		
 	}
 
+
+	public DataBaseSE getBase() {
+		return base;
+	}
+
+	public void setBase(DataBaseSE base) {
+		this.base = base;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -42,5 +55,8 @@ public class SchemaDTO implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	
+	
 
 }

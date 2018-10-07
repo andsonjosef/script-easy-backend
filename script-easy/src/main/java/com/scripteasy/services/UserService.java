@@ -32,6 +32,21 @@ public class UserService {
 	@Autowired
 	private BCryptPasswordEncoder pe;
 
+	public UserSE findByEmail(String email) {
+		UserSS user = UserSService.authenticated();
+
+		if (user == null || !user.hasRole(Profile.ADMIN) && !email.equals(user.getUsername())) {
+			throw new AuthorizationException("Acess denied");
+		}
+
+		UserSE obj = repo.findByEmail(email);
+		if(obj==null) {
+			throw new ObjectNotFoundException("object not found! Id: " + user.getId() + ", type: " + UserSE.class.getName() );
+		}
+		
+		return obj;
+	}
+	
 	public UserSE find(Integer id) {
 		UserSS user = UserSService.authenticated();
 

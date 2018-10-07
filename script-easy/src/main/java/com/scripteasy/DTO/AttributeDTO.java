@@ -38,10 +38,10 @@ public class AttributeDTO implements Serializable {
 	public  AttributeDTO(AttributeSE obj){
 		id = obj.getId();
 		ai = obj.isAi();
-		defaultA = obj.getDefaultA();
-		index = obj.getIndex();
+		defaultA = obj.getAdefault();
+		index = obj.getAindex();
 		name = obj.getName();
-		nullA = obj.isNullA();
+		nullA = obj.isAnull();
 		size = obj.getSize();
 		type = obj.getType();
 		comment = obj.getComment();
