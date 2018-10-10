@@ -74,7 +74,6 @@ public class SchemaService {
 
 	@Transactional
 	public SchemaSE insert(SchemaSE obj) {
-		System.out.println("so ?" +  obj.getDatabase().getId());
 		SchemaSE sc = new SchemaSE();
 		DataBaseSE db = new DataBaseSE();
 		db = databaseService.find(obj.getDatabase().getId());

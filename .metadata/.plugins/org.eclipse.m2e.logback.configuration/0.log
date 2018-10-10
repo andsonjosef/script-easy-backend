@@ -5895,3 +5895,151 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2018-10-07 02:39:18,148 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2018-10-07 02:39:18,152 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-10-07 02:39:18,152 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-07 17:55:26,397 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-07 17:55:26,433 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-07 17:55:26,643 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-07 17:55:26,648 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-07 17:55:26,648 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 12:51:57,529 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 12:51:57,575 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 12:51:57,704 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 12:51:57,709 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 12:51:57,710 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:03:04,852 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:03:04,871 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:03:04,910 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:03:04,914 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:03:04,915 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:03:11,727 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:03:11,730 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:03:11,830 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:03:11,834 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:03:11,834 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:03:40,076 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:03:40,079 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:03:40,127 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:03:40,130 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:03:40,130 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:03:51,945 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:03:51,948 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:03:51,960 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:03:51,964 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:03:51,964 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:04:48,167 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:04:48,170 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:04:48,179 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:04:48,184 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:04:48,185 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:04:51,045 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:04:51,048 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:04:51,056 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:04:51,060 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:04:51,060 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:04:56,629 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:04:56,631 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:04:56,639 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:04:56,643 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:04:56,643 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:05:44,243 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:05:44,245 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:05:44,253 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:05:44,257 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:05:44,258 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:05:53,341 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:05:53,344 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:05:53,350 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:05:53,354 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:05:53,354 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:05:58,360 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:05:58,365 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:05:58,378 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:05:58,382 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:05:58,383 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:06:12,050 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:06:12,053 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:06:12,084 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:06:12,087 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:06:12,088 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:07:55,330 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:07:55,332 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:07:55,338 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:07:55,341 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:07:55,341 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:08:07,629 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:08:07,632 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:08:07,668 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:08:07,672 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:08:07,672 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:08:33,687 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:08:33,690 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:08:33,703 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:08:33,707 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:08:33,708 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:08:49,296 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:08:49,332 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:08:49,342 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:08:49,347 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:08:49,348 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:09:21,952 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:09:21,954 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:09:22,837 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:09:22,839 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:09:22,839 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:09:30,025 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:09:30,027 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:09:30,037 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:09:30,040 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:09:30,041 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:09:38,567 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:09:38,569 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:09:38,576 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:09:38,579 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:09:38,580 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 13:09:46,212 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:09:46,214 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 13:09:46,221 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 13:09:46,223 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 13:09:46,224 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 14:39:29,456 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:39:29,460 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 14:39:29,474 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 14:39:29,478 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:39:29,478 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 14:39:59,522 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:39:59,525 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 14:39:59,536 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 14:39:59,540 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:39:59,540 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 14:41:23,375 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:41:23,377 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 14:41:23,433 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 14:41:23,435 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:41:23,435 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 14:41:30,200 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:41:30,202 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 14:41:30,209 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 14:41:30,211 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:41:30,211 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 14:42:18,887 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:42:18,889 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 14:42:18,896 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 14:42:18,899 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:42:18,899 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 14:42:43,462 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:42:43,467 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 14:42:43,486 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 14:42:43,494 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:42:43,494 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 14:42:49,814 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:42:49,817 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 14:42:49,825 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 14:42:49,828 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:42:49,829 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 14:42:59,826 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:42:59,829 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 14:42:59,848 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-10-10 14:42:59,851 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:42:59,851 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\JOSEPH\Documents\workspace-sts-3.9.5.RELEASE\script-easy\script-easy\src\test\resources
+2018-10-10 14:43:12,886 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-10 14:43:12,888 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2018-10-10 14:43:12,897 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource

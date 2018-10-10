@@ -27,4 +27,7 @@ public interface TableRepository extends JpaRepository<TableSE, Integer> {
 	
 	@Transactional(readOnly=true)
 	Page<TableSE> findBySchema(SchemaSE schema, Pageable pageRequest);
+	
+	@Transactional(readOnly = true)
+	TableSE findByNameContainingAndSchemaIn(String name,SchemaSE schemaBase);
 }
