@@ -27,7 +27,7 @@ public class TableSE implements Serializable {
 	@OneToMany(mappedBy = "table", cascade = CascadeType.ALL)
 	private List<AttributeSE> attributes = new ArrayList<>();
 
-	@JsonIgnore
+	
 	@ManyToOne
 	@JoinColumn(name = "schema_id")
 	private SchemaSE schema;

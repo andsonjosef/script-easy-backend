@@ -29,7 +29,6 @@ public class TableService {
 	@Autowired
 	private TableRepository repo;
 
-	
 	@Autowired
 	UserService userService;
 
@@ -81,21 +80,19 @@ public class TableService {
 
 		}
 	}
-	
+
 	@Transactional
 	public TableSE insert(TableSE obj) {
-		TableSE tb = new TableSE();
-		SchemaSE sc = new SchemaSE();
-		sc = schemaService.find(obj.getSchema().getId());
-		tb = repo.findByNameContainingAndSchemaIn(obj.getName(), sc);
-		if(tb != null) {
-			
+		SchemaSE sc = schemaService.find(obj.getSchema().getId());
+		TableSE tb = repo.findByNameContainingAndSchemaIn(obj.getName(), sc);
+		if (tb != null) {
+
 			throw new DataIntegrityException("Existing Schema!");
-			
-		}else {
-		
-		} 
-		
+
+		} else {
+
+		}
+
 		obj.setId(null);
 		obj.setSchema(sc);
 		obj = repo.save(obj);
@@ -112,19 +109,19 @@ public class TableService {
 			throw new DataIntegrityException("Can not delete because there are related orders");
 		}
 	}
+
 	private void updateData(TableSE newObj, TableSE obj) {
 		newObj.setName(obj.getName());
 
 	}
-	
+
 	public TableSE fromDTO(TableDTO objDto) {
 		return new TableSE(objDto.getId(), objDto.getName(), null);
 
 	}
-	
+
 	public TableSE fromDTO(TableNewDTO objDto) {
-		SchemaSE sc = new SchemaSE();
-		sc = schemaService.find(objDto.getSchema().getId());
+		SchemaSE sc = schemaService.find(objDto.getSchema().getId());
 		TableSE table = new TableSE(null, objDto.getName(), sc);
 		return table;
 

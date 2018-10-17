@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
-<fullyQualifiedTypeName name="javax.persistence.Id"/>
-<fullyQualifiedTypeName name="javax.validation.constraints.Email"/>
-<fullyQualifiedTypeName name="javax.validation.constraints.NotEmpty"/>
-<fullyQualifiedTypeName name="java.lang.annotation.Target"/>
 <fullyQualifiedTypeName name="java.lang.annotation.ElementType"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
@@ -35,7 +30,6 @@
 <fullyQualifiedTypeName name="com.scripteasy.repositories.SchemaRepository"/>
 <fullyQualifiedTypeName name="com.scripteasy.repositories.TableRepository"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="com.scripteasy.domain.AttributeSE"/>
 <fullyQualifiedTypeName name="com.scripteasy.repositories.AttributeRepository"/>
 <fullyQualifiedTypeName name="com.scripteasy.repositories.UserRepository"/>
 <fullyQualifiedTypeName name="com.scripteasy.services.DataBaseService"/>
@@ -51,7 +45,6 @@
 <fullyQualifiedTypeName name="com.scripteasy.services.UserService"/>
 <fullyQualifiedTypeName name="com.scripteasy.services.UserSService"/>
 <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
-<fullyQualifiedTypeName name="com.scripteasy.domain.TableSE"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 <fullyQualifiedTypeName name="com.scripteasy.services.excpetion.ObjectNotFoundException"/>
 <fullyQualifiedTypeName name="com.scripteasy.services.excpetion.DataIntegrityException"/>
@@ -60,4 +53,11 @@
 <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnore"/>
 <fullyQualifiedTypeName name="com.scripteasy.DTO.SchemaNewDTO"/>
 <fullyQualifiedTypeName name="com.scripteasy.domain.SchemaSE"/>
+<fullyQualifiedTypeName name="com.scripteasy.DTO.TableNewDTO"/>
+<fullyQualifiedTypeName name="com.scripteasy.DTO.AttributeDTO"/>
+<fullyQualifiedTypeName name="com.scripteasy.domain.AttributeSE"/>
+<fullyQualifiedTypeName name="com.scripteasy.DTO.AttributeNewDTO"/>
+<fullyQualifiedTypeName name="org.hibernate.validator.constraints.NotEmpty"/>
+<fullyQualifiedTypeName name="org.hibernate.validator.constraints.UniqueElements"/>
+<fullyQualifiedTypeName name="com.scripteasy.domain.TableSE"/>
 </qualifiedTypeNameHistroy>

@@ -2,29 +2,35 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="updateData" key="selection"/>
-		<item value="true" key="casesensitive"/>
+		<item value="" key="selection"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="system.out"/>
+			<item value="ww"/>
+			<item value="Aindex"/>
+			<item value="aIndex"/>
+			<item value="aDefault"/>
+			<item value="aNull"/>
+			<item value="Anull"/>
+			<item value="Adefault"/>
+			<item value="insert"/>
+			<item value="Contain"/>
+			<item value="CONTAIN"/>
+			<item value="inser"/>
 			<item value="updateData"/>
 			<item value="from"/>
 			<item value="fro,m"/>
-			<item value="page"/>
-			<item value="findSchemas"/>
-			<item value="schema"/>
-			<item value="Table"/>
-			<item value="Schema"/>
-			<item value="table"/>
-			<item value="findAl"/>
-			<item value="City"/>
-			<item value="DataBaseSE"/>
-			<item value="search"/>
-			<item value="TableSE"/>
-			<item value="DataBase"/>
 		</list>
 		<list key="replacehistory">
+			<item value="indexA"/>
+			<item value="defaulltA"/>
+			<item value="nullA"/>
+			<item value="aNull"/>
+			<item value="aIndex"/>
+			<item value="aDefault"/>
 			<item value="table"/>
 			<item value="Attribute"/>
 			<item value="Table"/>
@@ -34,19 +40,13 @@
 			<item value="AttributeSE"/>
 			<item value="Schema"/>
 			<item value="schema"/>
-			<item value="Integer"/>
-			<item value="SchemaSE"/>
-			<item value="database"/>
-			<item value="SchemSE"/>
-			<item value="user"/>
-			<item value="User"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="690" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="432" key="DIALOG_HEIGHT"/>
-		<item value="699" key="DIALOG_X_ORIGIN"/>
+		<item value="684" key="DIALOG_X_ORIGIN"/>
 		<item value="151" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

@@ -15,38 +15,37 @@ public class AttributeDTO implements Serializable {
 
 	private boolean ai;
 	private String defaultA;
-	private String index;
-	
-	@NotEmpty(message = "Required Field")
-	@Length(min = 5, max = 120, message = "The size must to be between 5 and 120 characters")
+	private String indexA;
+
+	@NotEmpty(message = "Name Required!")
+	@Length(min = 5, max = 120, message = "The nama's  size must to be between 5 and 120 characters")
 	private String name;
 
 	private boolean nullA;
-	
-	@NotEmpty(message = "Required Field")
+
+	@NotEmpty(message = "Size Required!")
 	private Integer size;
-	@NotEmpty(message = "Required Field")
+	@NotEmpty(message = "Type Required")
 	private String type;
 	private String comment;
 	private String referencesTable;
 
-
 	public AttributeDTO() {
-		
+
 	}
 
-	public  AttributeDTO(AttributeSE obj){
+	public AttributeDTO(AttributeSE obj) {
 		id = obj.getId();
 		ai = obj.isAi();
-		defaultA = obj.getAdefault();
-		index = obj.getAindex();
+		defaultA = obj.getDefaulltA();
+		indexA = obj.getIndexA();
 		name = obj.getName();
-		nullA = obj.isAnull();
+		nullA = obj.isNullA();
 		size = obj.getSize();
 		type = obj.getType();
 		comment = obj.getComment();
 		referencesTable = obj.getReferencesTable();
-		
+
 	}
 
 	public Integer getId() {
@@ -73,12 +72,12 @@ public class AttributeDTO implements Serializable {
 		this.defaultA = defaultA;
 	}
 
-	public String getIndex() {
-		return index;
+	public String getIndexA() {
+		return indexA;
 	}
 
-	public void setIndex(String index) {
-		this.index = index;
+	public void setIndexA(String indexA) {
+		this.indexA = indexA;
 	}
 
 	public String getName() {
@@ -128,6 +127,5 @@ public class AttributeDTO implements Serializable {
 	public void setReferencesTable(String referencesTable) {
 		this.referencesTable = referencesTable;
 	}
-
 
 }

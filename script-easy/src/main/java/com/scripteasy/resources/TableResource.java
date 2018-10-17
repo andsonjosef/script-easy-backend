@@ -21,7 +21,6 @@ import com.scripteasy.DTO.AttributeDTO;
 import com.scripteasy.DTO.TableDTO;
 import com.scripteasy.DTO.TableNewDTO;
 import com.scripteasy.domain.AttributeSE;
-import com.scripteasy.domain.SchemaSE;
 import com.scripteasy.domain.TableSE;
 import com.scripteasy.services.AttributeService;
 import com.scripteasy.services.TableService;
@@ -51,6 +50,13 @@ public class TableResource {
  		List<AttributeSE> list = attributeService.findByTable(tableId);
 		List<AttributeDTO> listDto = list.stream().map(obj -> new AttributeDTO(obj)).collect(Collectors.toList());
  		return ResponseEntity.ok().body(listDto);
+ 	}
+	
+	
+	@RequestMapping(value="/{tableId}/attributes/pk", method = RequestMethod.GET)
+	public ResponseEntity<Boolean> findPkAttributes(@PathVariable Integer tableId) {
+ 		boolean result = attributeService.hasPk(tableId);
+ 		return ResponseEntity.ok().body(result);
  	}
 	
 	@RequestMapping(value = "/{tableId}/attributes/page", method = RequestMethod.GET)

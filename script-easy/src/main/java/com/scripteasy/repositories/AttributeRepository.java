@@ -27,5 +27,14 @@ public interface AttributeRepository extends JpaRepository<AttributeSE, Integer>
 	
 	@Transactional(readOnly=true)
 	Page<AttributeSE> findByTable(TableSE schema, Pageable pageRequest);
+	
+	@Transactional(readOnly = true)
+	AttributeSE findByNameContainingAndTableIn(String name, TableSE table);
+	
+	@Transactional(readOnly = true)
+	AttributeSE findByIndexAContainingAndTableIn(String index, TableSE table);
+	
+	@Query("SELECT DISTINCT tab FROM TableSE tab, AttributeSE att WHERE tab.schema.id = :schemaId and att.indexA LIKE %:index% ORDER BY tab.name")
+	public List<TableSE> findReferences(@Param("schemaId") Integer schema_id, @Param("index") String index );
 
 }
