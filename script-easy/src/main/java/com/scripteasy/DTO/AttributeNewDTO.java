@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 import javax.validation.constraints.NotEmpty;
 
-import org.hibernate.validator.constraints.Length;
-
 import com.scripteasy.domain.TableSE;
 
 public class AttributeNewDTO implements Serializable {
@@ -16,7 +14,6 @@ public class AttributeNewDTO implements Serializable {
 	private String indexA;
 
 	@NotEmpty(message = "Name required")
-	@Length(min = 5, max = 120, message = "The nama's size must to be between 5 and 120 characters")
 	private String name;
 	private boolean nullA;
 

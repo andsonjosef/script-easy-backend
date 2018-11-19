@@ -34,7 +34,7 @@ public interface AttributeRepository extends JpaRepository<AttributeSE, Integer>
 	@Transactional(readOnly = true)
 	AttributeSE findByIndexAContainingAndTableIn(String index, TableSE table);
 	
-	@Query("SELECT DISTINCT tab FROM TableSE tab, AttributeSE att WHERE tab.schema.id = :schemaId and att.indexA LIKE %:index% ORDER BY tab.name")
-	public List<TableSE> findReferences(@Param("schemaId") Integer schema_id, @Param("index") String index );
+	@Query("SELECT DISTINCT tab FROM TableSE tab, AttributeSE att WHERE att.table.id = tab.id and tab.schema.id = :schemaId and att.indexA LIKE %:indexA% ORDER BY tab.name")
+	public List<TableSE> findReferences(@Param("schemaId") Integer schema_id, @Param("indexA") String index );
 
 }
